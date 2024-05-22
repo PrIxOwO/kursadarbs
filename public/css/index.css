@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,29,77,1) 100%);
+    color: #fff;
+    /*add font family roboto*/
+    font-family: 'Roboto', sans-serif;
+   
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#header {
+    position: fixed;
+    top: 3rem;
+    z-index: 100;
+    transition: all .5s ease;
+}
+
+
+.heder{
+    padding-top: 5rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.hederText{
+    font-size: 2rem;
+    color: #44ecff;
+}
+
+
+.lineFromTop{
+    border: solid 1px rgb(105, 105, 105);
+    width: 1px;
+    height: 6rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    line-height: 0;
+}
+
+.textDivColor{
+    color: rgb(105, 105, 105);
+}
+
+.infoBodeyExpertise{
+    padding: 2rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    text-align: center;
+}
+
+.expertiseText{
+    /*border: #44ecff 1px solid;*/
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+
+.aniBar{
+    /*posision it botom*/
+    position: absolute;
+    bottom: 6rem;
+    width: 100%;
+}
+
+
+
+.homeInt{
+    margin: 5rem;
+    padding: 5rem;
+}
+
+.homeIntHeddder{
+    text-align: center;
+    font-size: 4rem;
+    /*make the color*/
+    color: #44ecff;
+
+}
+
+.paddingCustom{
+    padding-left: 5rem;
+    font-variant-numeric: diagonal-fractions;
+}
+
+.paddingCustomto{
+    padding-left: 8rem;
+    font-variant-numeric: diagonal-fractions;
+}
+
+.paddingCustomtt{
+    padding-left: 9.5rem;
+    font-variant-numeric: diagonal-fractions;
+}
+
+/*image jasalabo*/
+.home{
+    /*position absolute alvays in center*/
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.04;
+    margin: auto;
+    width: 100%;
+    height: 60rem;
+    border: solid 1px red;
+    background-image: url("hello.png") !important;
+}
+.homeHeddder{
+    background: transparent !important;
+    /*make the backround a image*/
+    background-image: url("hello.png") !important;
+    background-repeat: no-repeat;
+    /*make the backround a image*/
+
+}
+/*set background a image from files hello.png*/
+/*image jasalabo*/
+
+#demo{
+    /*on hower show pointer*/
+    cursor: pointer !important;
+
+}
+  
+
+
+.containerBoxMainShow{
+    padding-top: 2%;
+    padding-bottom: 2rem;
+    margin-top: 5rem;
+    font-size: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: #004484c5;
+   
+}
+
+
+.mainBoxThingsDone{
+    padding: 2rem;
+    margin-bottom: 3rem !important;
+}
+
+.infoButtonMore{
+    text-decoration: none;
+    padding: 0.6rem;
+    color: aqua;
+    border: solid 1px aqua;
+}
+
+.infoButtonMore:hover{
+    background-color: aqua;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/*carusel*/
+.imgForCarusel{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.caruselBody{
+    
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.carousel-indicators li {
+    list-style: none; 
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+.carousel-indicators li {
+    border: 2px solid aqua; 
+    height: 0px; 
+    opacity: 0.5; 
+    width: 50px; 
+}
+
+
+.carousel-indicators .active {
+    opacity: 1; 
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 1 !important; 
+}
+
+
+.imgForCarusel {
+    width: 4rem; 
+}
+
+
+.carousel {
+    border-radius: 1rem !important; 
+}
+
+.linkDecor{
+    text-decoration: underline;
+    color: #44ecff;
+}
+.linkDecor:hover{
+    color: #28b4c4;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*expertise*/
+.expertiseCardInfo{
+    height: 8rem;
+    margin-bottom: 2rem;
+    background-color: #004484c5;
+    font-size: 1.5rem;
+    padding-left: 1.6rem;
+    padding-right: 2rem;
+}
+
+.expertiseCardInfo {
+    display: flex; 
+    align-items: center; 
+    box-shadow: 5px 10px 18px #00000070;
+  }
+  
+  .expertiseCardInfo .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .expertiseContainerBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .expertiseCardInfo {
+    width: calc(33.33% - 10px); 
+    margin-bottom: 20px; 
+  }
+
+  @media (max-width: 1100px) {
+    .expertiseCardInfo {
+      width: calc(50% - 10px); 
+    }
+  }
+  @media (max-width: 845px) {
+    .expertiseCardInfo {
+      width: calc(100% - 10px); 
+    }
+  }
+  
+.expertiseImage{
+    height: 6rem;
+    object-fit: cover;
+
+}
+
+.expertiseContainerBox{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+
+.theMainImg{
+    object-fit: cover;
+}
+
+
+.skilsHeder{
+    text-align: center;
+    font-size: 4rem;
+    color: #44ecff;
+    margin: 3rem;
+}
+
+
+
+/*detailed*/
+
+.caruselDesigne{
+    margin-bottom: 2rem;
+    background-color: rgba(0, 255, 255, 0.276);
+}
+
+.imgCaruseleSizeSetCustom{
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+}
+
+.innerContainer{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.downloadButton{
+    text-decoration: none;
+    padding: 0.6rem;
+    color: aqua;
+    border: solid 1px aqua;
+
+}
+
+#section1 {
+    height: 100%;
+}
+  
+#section2 {
+    height: 100%;
+}
+
+#section3 {
+    height: relative;
+}
+
