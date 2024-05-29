@@ -14,13 +14,12 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 1600px;
             margin: 0 auto;
             padding: 20px;
         }
 
         .mesage {
-            
             padding: 10px;
             margin-bottom: 10px;
         }
@@ -65,14 +64,15 @@
             background-color: #1DA1F2;
         }
 
-        .cardButton{
+        .cardButton {
             border: solid 1px #ccc;
             color: white;
             margin: 0;
             background-color: transparent;
             text-align: left;
             cursor: pointer;
-            width: 100%;}
+            width: 100%;
+        }
 
         .customDelButton {
             background-color: #510000;
@@ -105,37 +105,21 @@
     
     @foreach($data as $item)
     <div class="container">
-
-<button class="cardButton" onclick="window.location.href='{{ url('/comments/' . $item->ID) }}'"">
-        <div class="mesage">
-            <div class="heding">{{ $item->heading }}</div>
-            <div class="content">{{ $item->full_description }}</div>
-            <div class="author">{{ $item->user_name }}</div>
-            @if (Auth::check() && Auth::user()->id == $item->ID_user)
-            <form action="{{ route('delete.post', $item->data_id) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="customDelButton">Delete</button>
-            </form>
-
-            <!-- 
-            @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
+        <button class="cardButton" onclick="window.location.href='{{ url('/comments/' . $item->ID) }}'">
+            <div class="mesage">
+                <div class="heding">{{ $item->heading }}</div>
+                <div class="content">{{ \Illuminate\Support\Str::limit($item->full_description, 500, '...') }}</div>
+                <div class="author">{{ $item->user_name }}</div>
+                @if (Auth::check() && Auth::user()->id == $item->ID_user)
+                <form action="{{ route('delete.post', $item->data_id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="customDelButton">Delete</button>
+                </form>
+                @endif
             </div>
-            @endif
-
-            @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-            @endif
-            -->
-
-            @endif
-        </div>
+        </button>
     </div>
-    </button>
     @endforeach
 </body>
 

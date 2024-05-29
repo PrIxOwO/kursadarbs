@@ -12,12 +12,6 @@ Route::get('/forms', [InsertController::class, 'showData']);
 
 
 Route::delete('/delete/{id}', [InsertController::class, 'destroy'])->name('delete.post');
-Route::get('comments/{ID}', [InsertController::class, 'show']);
-Route::get('comments/{ID}', [InsertController::class, 'shoComent']);
-Route::get('comments/{ID}', [InsertController::class, 'showComments']);
-Route::get('comments/{ID}', [InsertController::class, 'show'])->name('comments.show');
-Route::post('/comments/{id}/add', [InsertController::class, 'addComment']);
-Route::delete('/comments/{id}/delete', [InsertController::class, 'deleteComment'])->name('delete.comment');
 
 
 
@@ -35,6 +29,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit', [InsertController::class, 'showInsertForm']);
     Route::post('/edit', [InsertController::class, 'storeInsert']);
     Route::post('/comments/{ID}', [InsertController::class, 'addComment']);
+
+    Route::get('comments/{ID}', [InsertController::class, 'show']);
+    Route::get('comments/{ID}', [InsertController::class, 'shoComent']);
+    Route::get('comments/{ID}', [InsertController::class, 'showComments']);
+    Route::get('comments/{ID}', [InsertController::class, 'show'])->name('comments.show');
+    Route::post('/comments/{id}/add', [InsertController::class, 'addComment']);
+    Route::delete('/comments/{id}/delete', [InsertController::class, 'deleteComment'])->name('delete.comment');
+
 });
 
 require __DIR__.'/auth.php';
