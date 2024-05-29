@@ -4,87 +4,8 @@
 <head>
     <title>Add</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: rgb(14, 14, 21);
-            color: white;
-            font-size: 1.4rem;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .message {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        .message .heading {
-            font-weight: bold;
-        }
-
-        .message .content {
-            margin-top: 5px;
-        }
-
-        .message .author {
-            font-size: 12px;
-            color: #999;
-        }
-
-        .mainHeader {
-            background-color: #1DA1F2;
-            height: 3rem;
-            width: 100%;
-            margin-bottom: 4rem;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: white;
-            text-decoration: none;
-        }
-
-        form {
-            margin: 0 auto;
-            width: 50%;
-            padding: 1em;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5em;
-        }
-
-        input[type="text"],
-        input[type="file"],
-        textarea {
-            width: 100%;
-            padding: 0.5em;
-        }
-
-        input[type="submit"] {
-            padding: 0.5em 1em;
-            margin-top: 1em;
-        }
-
-        .char-count {
-            font-size: 0.9rem;
-            color: #999;
-            text-align: right;
-        }
-    </style>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/edit.css" rel="stylesheet">
 </head>
 
 <body>

@@ -16,7 +16,6 @@
                 <input class="serchBox" type="text" name="query" placeholder="Search">
                 <button class="serchBox" type="submit">Search</button>
             </form>
-            <!-- atkarībā vai ir lietotājs parāda vainu log out vai log in / register -->
             @if (Auth::check())
             <form class="ms-auto p-1" action="/logout" method="POST">
                 @csrf
@@ -32,13 +31,11 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="addPostButton">
             <a href="/edit">Add Post</a>
         </div>
     </div>
-
 
     @foreach($data as $item)
     <div class="container">
@@ -46,13 +43,11 @@
             <div class="mesage">
                 <div class="heding">{{ $item->heading }}</div>
                 @if ($item->photos)
-                <img src="{{ asset('uploads/inserts/' . $item->photos) }}" class="img-fluid" alt="Responsive image" style="max-height: 45rem">
+                <img src="{{ asset('uploads\inserts/' . $item->photos) }}" class="img-fluid" alt="Responsive image">
                 @else
                 @endif
-                <!-- parāda pilno tekstu ar ierobežotu garumu -->
                 <div class="content">{{ \Illuminate\Support\Str::limit($item->full_description, 500, '...') }}</div>
                 <div class="author">{{ $item->user_name }}</div>
-                <!-- pārbauda autoru un ja tas ir tas pats kas izveidoja parāda viņam dzēšanas pogu -->
                 @if (Auth::check() && Auth::user()->id == $item->ID_user)
                 <form action="{{ route('delete.post', $item->data_id) }}" method="POST">
                     @csrf

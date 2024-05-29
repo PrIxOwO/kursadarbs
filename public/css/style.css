@@ -1,34 +1,154 @@
-body{
-    background-color: rgb(255, 187, 0) !important;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(14, 14, 21);
+    color: white;
+    font-size: 1.4rem;
 }
 
-.box{
-    width: 70%;
+.serchBox {
+    background-color: #1DA1F2;
+    border: solid 1px cyan;
+    color: white;
+    outline: none;
 }
 
-.smallline{
-    width: 80%;
-    height: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.448);
+.serchBox:hover {
+    background-color: #1DA1F2;
 }
 
-.bigline{
-    width: 90%;
-    height: 0.7rem;
-    background-color: rgba(255, 255, 255, 0.752);
+.serchBox:focus {
+    background-color: #1DA1F2;
+
 }
 
-.iesakumsport{
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.serchBox:-webkit-autofill {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #1DA1F2 inset;
+
 }
 
-.starttextheder{
-    font-size: 2rem;
-    
+.customLogOut {
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: -1px;
+
 }
 
-.portfdonejobs{
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.mainHeder {
+    background-color: #1DA1F2;
+    height: 3rem;
+    width: 100%;
+    margin-bottom: 4rem;
 }
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mesage {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.mesage .heding {
+    font-weight: bold;
+}
+
+.mesage .content {
+    margin-top: 5px;
+}
+
+.mesage .author {
+    font-size: 12px;
+    color: #999;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.addPostButton {
+    margin-bottom: 1rem;
+}
+
+.addPostButton a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: solid 1px #1DA1F2;
+}
+
+.addPostButton a:hover {
+    background-color: #1DA1F2;
+}
+
+.cardButton {
+    border: solid 1px #ccc;
+    color: white;
+    margin: 0;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.customDelButton {
+    background-color: #510000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: -1px;
+}
+
+.customLogOut {
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: -1px;
+
+}
+
+.message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message .heading {
+    font-weight: bold;
+}
+
+.message .content {
+    margin-top: 5px;
+}
+
+.message .author {
+    font-size: 12px;
+    color: #999;
+}
+
+.mainHeader {
+    background-color: #1DA1F2;
+    height: 3rem;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.customprimary {
+    margin-top: 2rem;
+    background-color: transparent;
+    border: 1px solid #1DA1F2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+

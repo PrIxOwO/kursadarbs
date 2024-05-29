@@ -12,7 +12,7 @@ Route::get('/forms', [InsertController::class, 'showData']);
 
 
 Route::delete('/delete/{id}', [InsertController::class, 'destroy'])->name('delete.post');
-
+Route::get('/search', [InsertController::class, 'search'])->name('search');
 
 
 
@@ -36,7 +36,6 @@ Route::middleware('auth')->group(function () {
     Route::get('comments/{ID}', [InsertController::class, 'show'])->name('comments.show');
     Route::post('/comments/{id}/add', [InsertController::class, 'addComment']);
     Route::delete('/comments/{id}/delete', [InsertController::class, 'deleteComment'])->name('delete.comment');
-
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
