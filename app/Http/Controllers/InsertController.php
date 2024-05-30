@@ -23,7 +23,6 @@ class InsertController extends Controller
         return view('forums', ['data' => $data]);
     }
 
-
     public function show($ID)
     {
         try {
@@ -40,29 +39,6 @@ class InsertController extends Controller
             return redirect('/forms')->with('error', 'Post not found');
         }
     }
-
-
-
-    public function shoComent()
-    {
-        // apvieno komentarus ar users tabulu
-        $data2 = DB::table('coment')
-            ->join('users', 'data2.inserter_id', '=', 'users.id')
-            ->select('data2.*', 'data2.id as data_id', 'users.name as user_name')
-            ->get();
-
-        //padod datus uz forums skatu
-        return view('forums', ['data2' => $data2]);
-    }
-    public function showComments()
-    {
-        // iegūst komentus no Coment model
-        $data2 = Coment::all();
-
-        //padod komentārus uz coments skatu
-        return view('coments', ['data2' => $data2]);
-    }
-
 
     public function showInsertForm()
     {

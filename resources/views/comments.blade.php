@@ -3,7 +3,7 @@
 <head>
     <title>Forums</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet"> <!-- lai atrastu css -->
 </head>
 <body>
 <div class="mainHeder">
@@ -29,18 +29,6 @@
             @endif
         </div>
     </div>
-
-    @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-    @endif
-
-    @if(session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-    @endif
 
     @foreach ($data ? [$data] : [] as $item)
 
