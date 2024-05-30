@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Forms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -32,25 +31,23 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="addPostButton">
             <a href="/edit">Add Post</a>
         </div>
     </div>
 
-
     @foreach($data as $item)
     <div class="container">
         <button class="cardButton" onclick="window.location.href='{{ url('/comments/' . $item->ID) }}'">
             <div class="mesage">
-                <div class="heding">{{ $item->heading }}</div>
+                <div class="heding" style="word-wrap: break-word;">{{ $item->heading }}</div>
                 @if ($item->photos)
                 <img src="{{ asset('uploads/inserts/' . $item->photos) }}" class="img-fluid" alt="Responsive image" style="max-height: 45rem">
                 @else
                 @endif
                 <!-- parāda pilno tekstu ar ierobežotu garumu -->
-                <div class="content">{{ \Illuminate\Support\Str::limit($item->full_description, 500, '...') }}</div>
+                <div class="content" style="word-wrap: break-word;">>{{ \Illuminate\Support\Str::limit($item->full_description, 500, '...') }}</div>
                 <div class="author">{{ $item->user_name }}</div>
                 <!-- pārbauda autoru un ja tas ir tas pats kas izveidoja parāda viņam dzēšanas pogu -->
                 @if (Auth::check() && Auth::user()->id == $item->ID_user)
@@ -65,5 +62,4 @@
     </div>
     @endforeach
 </body>
-
 </html>

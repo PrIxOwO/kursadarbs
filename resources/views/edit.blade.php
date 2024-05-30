@@ -35,11 +35,12 @@
     </form>
 
     <script>
+        // parāda cik vel daudz var rakstīt
         function updateCharCount() {
-            const headingInput = document.getElementById('heading');
-            const charCount = document.getElementById('headingCharCount');
-            const remaining = 250 - headingInput.value.length;
-            charCount.textContent = `${remaining} characters remaining`;
+            const headingInput = document.getElementById('heading'); // iegūst ievades lauku
+            const charCount = document.getElementById('headingCharCount'); // iegūst simbolu skaitītāju
+            const remaining = 250 - headingInput.value.length; // aprēķina atlikušo simbolu skaitu
+            charCount.textContent = `${remaining} characters remaining`; // atjauno tekstu cik vel palicis
         }
     </script>
 </body>
